@@ -9,17 +9,23 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: linear-gradient(180deg, #000, #111);
-  color: #fff;
+  background: #0f0f0f;
+  color: white;
   text-align: center;
 }
 
-header {
-  padding: 50px 20px;
+.container {
+  padding: 30px 20px;
+}
+
+img {
+  width: 100px;
+  border-radius: 50%;
+  margin-top: 20px;
 }
 
 h1 {
-  font-size: 32px;
+  margin: 10px 0;
   color: #f1c40f;
 }
 
@@ -27,102 +33,51 @@ p {
   color: #ccc;
 }
 
-.section {
-  padding: 30px;
-}
-
-.card {
+.link {
+  display: block;
   background: #1a1a1a;
-  padding: 20px;
-  margin: 15px;
-  border-radius: 12px;
-}
-
-.btn {
-  background: #f1c40f;
+  margin: 12px 0;
   padding: 15px;
-  margin-top: 15px;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  width: 80%;
-}
-
-input, select {
-  width: 80%;
-  padding: 12px;
-  margin: 10px;
-  border-radius: 6px;
-  border: none;
-}
-
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 20px;
+  border-radius: 10px;
   text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.link:hover {
+  background: #f1c40f;
+  color: black;
 }
 </style>
+
 </head>
 
 <body>
 
-<header>
+<div class="container">
+
+  <img src="https://i.imgur.com/6VBx3io.png">
+
   <h1>Barbearia Lucas Freitas</h1>
-  <p>Corte na régua • Barba alinhada • Atendimento diferenciado</p>
-</header>
+  <p>Corte na régua • Barba alinhada</p>
 
-<div class="section card">
-  <h2>Agendar horário</h2>
+  <a class="link" href="https://wa.me/5585986845280" target="_blank">
+    📲 Agendar pelo WhatsApp
+  </a>
 
-  <input type="text" id="nome" placeholder="Seu nome">
+  <a class="link" href="#" target="_blank">
+    📅 Agendamento automático
+  </a>
 
-  <select id="servico">
-    <option value="Corte - R$30">Corte - R$30</option>
-    <option value="Barba - R$25">Barba - R$25</option>
-    <option value="Sobrancelha - R$5">Sobrancelha - R$5</option>
-  </select>
+  <a class="link" href="https://instagram.com" target="_blank">
+    📸 Ver trabalhos no Instagram
+  </a>
 
-  <select id="hora">
-    <option>08:30</option>
-    <option>09:00</option>
-    <option>10:00</option>
-    <option>11:00</option>
-    <option>14:00</option>
-    <option>15:00</option>
-    <option>16:00</option>
-    <option>17:00</option>
-    <option>18:00</option>
-  </select>
+  <a class="link" href="#" target="_blank">
+    💰 Planos mensais
+  </a>
 
-  <button class="btn" onclick="agendar()">Confirmar Agendamento</button>
 </div>
-
-<a class="whatsapp" href="https://wa.me/5585986845280" target="_blank">💬</a>
-
-<script>
-function agendar() {
-  let nome = document.getElementById('nome').value;
-  let servico = document.getElementById('servico').value;
-  let hora = document.getElementById('hora').value;
-
-  if(nome === "") {
-    alert("Digite seu nome!");
-    return;
-  }
-
-  let mensagem = `Olá, meu nome é ${nome}. Quero agendar ${servico} às ${hora}.`;
-
-  let url = `https://wa.me/5585986845280?text=${encodeURIComponent(mensagem)}`;
-
-  window.open(url, '_blank');
-}
-</script>
 
 </body>
 </html>
