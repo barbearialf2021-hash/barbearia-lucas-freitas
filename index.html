@@ -9,36 +9,63 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #0f0f0f;
+  background: linear-gradient(180deg, #000, #111);
   color: #fff;
   text-align: center;
 }
 
 header {
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
-h1 { font-size: 26px; }
+h1 {
+  font-size: 32px;
+  color: #f1c40f;
+}
+
+p {
+  color: #ccc;
+}
+
+.section {
+  padding: 30px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 12px;
+}
 
 .btn {
   background: #f1c40f;
   padding: 15px;
-  display: inline-block;
   margin-top: 15px;
-  color: #000;
   border: none;
   border-radius: 8px;
   font-weight: bold;
+  width: 80%;
 }
 
-.section { padding: 30px; }
-
-select, input {
-  padding: 10px;
-  margin: 10px;
+input, select {
   width: 80%;
-  border-radius: 5px;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 6px;
   border: none;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
 }
 </style>
 </head>
@@ -47,10 +74,10 @@ select, input {
 
 <header>
   <h1>Barbearia Lucas Freitas</h1>
-  <p>Corte na régua, atendimento diferenciado</p>
+  <p>Corte na régua • Barba alinhada • Atendimento diferenciado</p>
 </header>
 
-<div class="section">
+<div class="section card">
   <h2>Agendar horário</h2>
 
   <input type="text" id="nome" placeholder="Seu nome">
@@ -76,6 +103,8 @@ select, input {
   <button class="btn" onclick="agendar()">Confirmar Agendamento</button>
 </div>
 
+<a class="whatsapp" href="https://wa.me/5585986845280" target="_blank">💬</a>
+
 <script>
 function agendar() {
   let nome = document.getElementById('nome').value;
@@ -83,7 +112,7 @@ function agendar() {
   let hora = document.getElementById('hora').value;
 
   if(nome === "") {
-    alert("Coloque seu nome!");
+    alert("Digite seu nome!");
     return;
   }
 
