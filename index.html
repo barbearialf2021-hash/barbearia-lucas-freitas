@@ -9,50 +9,50 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: linear-gradient(180deg, #000, #111);
   color: white;
   text-align: center;
+  background: url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186') center/cover;
 }
 
-.container {
+.overlay {
+  background: rgba(0,0,0,0.75);
+  min-height: 100vh;
   padding: 40px 20px;
 }
 
 .logo {
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   border: 3px solid #f1c40f;
-  margin-bottom: 10px;
 }
 
 h1 {
-  color: #f1c40f;
   margin: 10px 0;
-  font-size: 28px;
+  color: #f1c40f;
 }
 
 p {
   color: #ccc;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-.link {
+.btn {
   display: block;
-  background: #1c1c1c;
+  background: rgba(255,255,255,0.08);
   margin: 12px auto;
   padding: 16px;
   border-radius: 12px;
   width: 90%;
-  max-width: 400px;
+  max-width: 380px;
   text-decoration: none;
   color: white;
   font-weight: bold;
+  border: 1px solid rgba(255,255,255,0.15);
   transition: 0.3s;
-  border: 1px solid #333;
 }
 
-.link:hover {
+.btn:hover {
   background: #f1c40f;
   color: black;
   transform: scale(1.03);
@@ -61,45 +61,35 @@ p {
 .highlight {
   background: #f1c40f;
   color: black;
-}
-
-.footer {
-  margin-top: 40px;
-  font-size: 14px;
-  color: #777;
+  border: none;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<div class="overlay">
 
   <img class="logo" src="https://i.imgur.com/6VBx3io.png">
 
   <h1>Barbearia Lucas Freitas</h1>
-  <p>Corte na régua • Barba alinhada • Atendimento diferenciado</p>
+  <p>Corte na régua • Barba alinhada • Estilo de respeito</p>
 
-  <a class="link highlight" href="https://wa.me/5585986845280" target="_blank">
-    📲 Agendar pelo WhatsApp
+  <a class="btn highlight" href="https://wa.me/5585986845280" target="_blank">
+    📲 Agendar agora
   </a>
 
-  <a class="link" href="#" target="_blank">
+  <a class="btn" href="https://instagram.com/jlucas_freitas" target="_blank">
+    📸 Instagram
+  </a>
+
+  <a class="btn" href="#">
+    💈 Planos mensais
+  </a>
+
+  <a class="btn" href="#">
     📅 Agendamento automático
   </a>
-
-  <a class="link" href="https://instagram.com/jlucas_freitas" target="_blank">
-    📸 Ver trabalhos no Instagram
-  </a>
-
-  <a class="link" href="#" target="_blank">
-    💰 Planos mensais
-  </a>
-
-  <div class="footer">
-    @jlucas_freitas • Barbearia Lucas Freitas
-  </div>
 
 </div>
 
