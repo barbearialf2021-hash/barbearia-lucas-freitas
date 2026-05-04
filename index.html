@@ -6,82 +6,145 @@
 <title>Barbearia Lucas Freitas</title>
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: Arial;
-  background: url('barbearia.jpg') center/cover no-repeat;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
   height: 100vh;
+  background: url('barbearia.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.overlay {
+/* Fundo escuro */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background: rgba(0,0,0,0.75);
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
+}
+
+/* Container */
+.container {
+  position: relative;
+  z-index: 1;
   width: 90%;
   max-width: 400px;
+  text-align: center;
   color: white;
 }
 
+/* Foto perfil */
+.profile {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #f1c40f;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+/* Nome */
 h1 {
   color: #f1c40f;
   margin-bottom: 10px;
 }
 
+/* Descrição */
 p {
+  font-size: 14px;
   color: #ccc;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* Botões */
 .btn {
   display: block;
-  margin: 10px 0;
   padding: 15px;
-  border-radius: 10px;
+  margin: 10px 0;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
-.agendar {
+/* Hover */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Botão principal */
+.primary {
   background: #f1c40f;
   color: black;
 }
 
-.whatsapp {
-  background: #25D366;
+/* Botões escuros */
+.dark {
+  background: #1f1f1f;
   color: white;
 }
 
-.instagram {
-  background: #1a1a1a;
+/* WhatsApp flutuante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
   color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 </style>
 </head>
 
 <body>
 
-<div class="overlay">
+<div class="container">
+
+  <!-- FOTO (troca o nome se precisar) -->
+  <img src="perfil.jpg" class="profile">
 
   <h1>Barbearia Lucas Freitas</h1>
-  <p>Corte na régua • Barba alinhada • Atendimento diferenciado</p>
 
-  <a class="btn agendar" href="#" target="_blank">
-    📅 Agendar horário
+  <p>
+    + de 100 clientes atendidos <br>
+    Especialista em degradê e barba <br>
+    Atendimento com hora marcada em Fortaleza
+  </p>
+
+  <a class="btn primary" href="https://wa.me/5585986845280" target="_blank">
+    📲 Agendar agora pelo WhatsApp
   </a>
 
-  <a class="btn whatsapp" href="https://wa.me/5585986845280" target="_blank">
-    💬 Falar no WhatsApp
+  <a class="btn dark" href="#" target="_blank">
+    📅 Agendamento automático
   </a>
 
-  <a class="btn instagram" href="https://instagram.com/barbearialucasfreitas" target="_blank">
-    📸 Ver trabalhos no Instagram
+  <a class="btn dark" href="https://instagram.com/barbearialucasfreitas" target="_blank">
+    📸 Ver resultados no Instagram
+  </a>
+
+  <a class="btn dark" href="#" target="_blank">
+    💰 Conhecer planos mensais
   </a>
 
 </div>
+
+<!-- BOTÃO FLUTUANTE -->
+<a class="whatsapp-float" href="https://wa.me/5585986845280" target="_blank">
+  💬
+</a>
 
 </body>
 </html>
