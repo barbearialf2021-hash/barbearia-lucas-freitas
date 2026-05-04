@@ -11,18 +11,18 @@ body {
   font-family: Arial;
   color: white;
   text-align: center;
-  background: url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186') center/cover;
+  background: url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186') center/cover no-repeat;
 }
 
 .overlay {
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.85);
   min-height: 100vh;
   padding: 40px 20px;
 }
 
 .logo {
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
   border: 3px solid #f1c40f;
 }
@@ -30,11 +30,18 @@ body {
 h1 {
   margin: 10px 0;
   color: #f1c40f;
+  font-size: 26px;
 }
 
 p {
   color: #ccc;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 30px;
 }
 
 .btn {
@@ -62,6 +69,25 @@ p {
   background: #f1c40f;
   color: black;
   border: none;
+  box-shadow: 0 0 15px rgba(241,196,15,0.5);
+}
+
+.info {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
 }
 </style>
 </head>
@@ -73,25 +99,36 @@ p {
   <img class="logo" src="https://i.imgur.com/6VBx3io.png">
 
   <h1>Barbearia Lucas Freitas</h1>
-  <p>Corte na régua • Barba alinhada • Estilo de respeito</p>
+  <p class="tagline">
+    Mais de clientes satisfeitos • Atendimento diferenciado • Estilo de respeito
+  </p>
 
   <a class="btn highlight" href="https://wa.me/5585986845280" target="_blank">
     📲 Agendar agora
   </a>
 
   <a class="btn" href="https://instagram.com/jlucas_freitas" target="_blank">
-    📸 Instagram
+    📸 Ver cortes no Instagram
   </a>
 
   <a class="btn" href="#">
-    💈 Planos mensais
+    💈 Conheça nossos planos
   </a>
 
   <a class="btn" href="#">
     📅 Agendamento automático
   </a>
 
+  <div class="info">
+    ⭐ Atendimento de qualidade <br>
+    📍 Fortaleza - CE
+  </div>
+
 </div>
+
+<a class="whatsapp" href="https://wa.me/5585986845280" target="_blank">
+💬
+</a>
 
 </body>
 </html>
